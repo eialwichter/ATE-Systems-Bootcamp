@@ -3,7 +3,7 @@
 |Date|Task ID|Description|Status|
 |-|-|-|-|
 |2026-04-30|01|Repository Setup|In Progress|
-|2026-06-15|01|Repository Setup|In Progress|
+|2026-06-15|01|Repository Setup|In progress|
 
 ## Notes:
 
