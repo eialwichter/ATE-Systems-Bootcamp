@@ -22,11 +22,22 @@ void loop() {
   // TODO: Implement timer-based debounce logic
   // Check if the switch changed state due to noise or actual press
   
-  // if (reading != lastButtonState) { reset timer... }
+  if (reading != lastButtonState) 
+  {
+    lastDebounceTime = millis();//reset the debounce timer to current time
+  }
   
-  // if (millis() - lastDebounceTime > DEBOUNCE_DELAY) {
-  //    if (reading != buttonState) { update state... }
-  // }
+  if (millis() - lastDebounceTime > DEBOUNCE_DELAY) 
+  {
+   if (reading != buttonState) 
+   {
+    buttonState=reading;// update the official stable button state
+    if(buttonState= LOW)//if the button is currently pressed
+    {
+      Serial.println("Button Pressed");//print message to the user that button pressed  
+    }
+   } 
+  }
 
   lastButtonState = reading;
 }
